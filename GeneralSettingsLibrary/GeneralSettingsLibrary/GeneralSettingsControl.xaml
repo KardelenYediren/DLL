@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="GeneralSettingsLibrary.GeneralSettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:GeneralSettingsLibrary"
+             mc:Ignorable="d"
+             d:DesignHeight="650" d:DesignWidth="500"
+             Background="Transparent">
+    
+
+    <!-- Button Styles -->
+    <UserControl.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RoundedButtonStyle1" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="DeepSkyBlue"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <!-- Main Grid, a single column definition -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="573*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Main Border, rounded corner background -->
+        <Border Background="#c0c0c0" CornerRadius="20" Grid.ColumnSpan="1" Grid.RowSpan="2">
+            <Grid Margin="0,0,0,10">
+                <!-- Inner Grid column definitions -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <!-- Left column, fixed width -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- Middle column, flexible width -->
+                    <ColumnDefinition Width="100"/>
+                    <!-- Right column, fixed width -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Inner Grid row definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="31"/>
+                    <!-- Top row, fixed height -->
+                    <RowDefinition/>
+                    <!-- Middle row, flexible height -->
+                    <RowDefinition Height="40"/>
+                    <!-- Bottom row, fixed height -->
+                </Grid.RowDefinitions>
+
+                <!-- Top row background and rounded corners -->
+                <Border Grid.ColumnSpan="3" Background="#252525" CornerRadius="20,20,0,0" Margin="0,0,0,1"/>
+
+                <!-- Title label -->
+                <Label Content="  General Settings"
+                       Foreground="Gray"
+                       FontWeight="SemiBold"
+                       Grid.Column="0" 
+                       Height="30" 
+                       VerticalAlignment="Center" 
+                       Grid.ColumnSpan="2" 
+                       Margin="0,0,289,0"/>
+
+                <!-- Window control buttons (minimize, maximize/restore, close) -->
+                <StackPanel HorizontalAlignment="Center"
+                            Orientation="Horizontal"
+                            Grid.Row="0"
+                            Grid.Column="2" Width="84">
+                    <!-- Minimize button -->
+                    <Button Width="25" Height="25"
+                            Content="_"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"
+                            Click="ButtonMinimize_Click"/>
+
+                    <!-- Maximize/Restore button -->
+                    <Button Width="30" Height="28"
+                            Content="□"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Click="WindowStateButton_Click"/>
+
+                    <!-- Close button -->
+                    <Button Width="30" Height="20"
+                            Content="❌"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Click="CloseButton_Click"/>
+                </StackPanel>
+
+                <!-- Content of the window goes here -->
+                <ScrollViewer Grid.ColumnSpan="3" Grid.Row="1">
+                    <StackPanel Margin="10">
+                        <!-- Graphics settings description texts and options -->
+                        <TextBlock Text="Graphics Setting" FontWeight="Bold" FontSize="14" TextWrapping="Wrap" TextAlignment="Justify"/>
+                        <TextBlock Text="Note: Changing the graphics setting does not take effect until AutoCase is restarted." Margin="0,10,0,20" TextWrapping="Wrap" TextAlignment="Justify"/>
+
+                        <!-- Radio buttons for graphics settings -->
+                        <RadioButton GroupName="GraphicsSetting" Content="Quality" Margin="0,0,0,10"/>
+                        <TextBlock Text="Use this setting for the highest quality realistic visualization." Margin="20,0,0,10" TextWrapping="Wrap" TextAlignment="Justify"/>
+
+                        <RadioButton GroupName="GraphicsSetting" Content="Performance" IsChecked="True" Margin="0,0,0,10"/>
+                        <TextBlock Text="Use this setting when performance is desired over realistic visualization such as in modeling." Margin="20,0,0,10" TextWrapping="Wrap" TextAlignment="Justify"/>
+
+                        <RadioButton GroupName="GraphicsSetting" Content="Conservative" Margin="0,0,0,10"/>
+                        <TextBlock Text="Use this setting for conservative graphics hardware use with" Margin="20,0,0,10" TextWrapping="Wrap" TextAlignment="Justify"/>
+
+                        <CheckBox Content="Software graphics" Margin="0,0,0,10"/>
+                        <TextBlock Text="Use only for systems with unrecognized graphics hardware or when graphics hardware does not support desired functionality." Margin="20,0,0,10" TextWrapping="Wrap" TextAlignment="Justify"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,17 @@
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\bin\Debug\net6.0-windows\GeneralSettingsLibrary.deps.json
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\bin\Debug\net6.0-windows\GeneralSettingsLibrary.dll
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\bin\Debug\net6.0-windows\GeneralSettingsLibrary.pdb
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.csproj.AssemblyReference.cache
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsControl.g.cs
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary_MarkupCompile.cache
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary_MarkupCompile.lref
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsControl.baml
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.g.resources
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.AssemblyInfoInputs.cache
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.AssemblyInfo.cs
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.dll
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\refint\GeneralSettingsLibrary.dll
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\GeneralSettingsLibrary.pdb
+C:\Users\karde\Desktop\Codeo\GeneralSettingsLibrary\GeneralSettingsLibrary\obj\Debug\net6.0-windows\ref\GeneralSettingsLibrary.dll
